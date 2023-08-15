@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #ffe8e2;
+  color: #e87852;
+}
+
+.bg-pastel {
+  background: #ffe8e2;
+}
+
+.text-pastel {
+  @apply text-slate-100;
+}
+
+.pastel-text {
+  background: linear-gradient(
+    45deg,
+    #b19cd9,
+    #84a8e0,
+    #6cc3e5,
+    #77d8d8,
+    #89e39a,
+    #b8e288,
+    #e4e063,
+    #f5cb5c
+  );
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: pastel-animation 8s linear infinite;
+}
+
+@keyframes pastel-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+th {
+  @apply text-sm font-bold text-[#333];
+}
